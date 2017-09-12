@@ -1,4 +1,7 @@
+---
 applications:
-- name: node-hello-world
-  memory: 128M
-  buildpack: sdk-for-nodejs
+- buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  host: helloworld-html-${random-word}
+  name: helloworld-html
+  memory: 64M
+  stack: cflinuxfs2
